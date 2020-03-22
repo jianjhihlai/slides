@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>深度學習卷積神經網路的發展與在空間資料的研究</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+        <!-- Awesome icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides/example.md"
+                         data-separator="^\r?\n---\r?\n\r?\n"
+                         data-separator-vertical="^\r?\n----\r?\n\r?\n"
+                         data-separator-notes="^Note:"
+                         data-charset="utf-8">
+                </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+                    { src: 'plugin/spotlight/spotlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/math-katex/math-katex.js', async: true }
+				],
+                backgroundTransition: 'slide',
+                spotlight: {
+
+                    // size of the spotlight
+                    size: 60,
+
+                    // true: Locks the mouse pointer inside the presentation
+                    // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+                    // displayed regardless of the configured values
+                    lockPointerInsideCanvas: false,
+
+                    // toggle spotlight by holding down the mouse key
+                    toggleSpotlightOnMouseDown: true,
+
+                    // the keyCode pressed and held to turn on spotlight, disabled when set to false
+                    // Problems with this config? Maybe your touchpad is disabled on keypress?
+                    spotlightOnKeyPressAndHold: false,
+
+                    // choose the cursor when spotlight is on. Maybe "crosshair"?
+                    spotlightCursor: 'none',
+
+                    // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+                    presentingCursor: 'none',
+
+                    // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+                    initialPresentationMode: true,
+
+                    // true: disable selecting in presentation mode
+                    disablingUserSelect: true,
+
+                    // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+                    fadeInAndOut: 100,
+
+                    // enable pointer mode
+                    useAsPointer: false,
+
+                    // pointer color (If pointer mode enabled)
+                    pointerColor: 'red'
+                },
+                keyboard: {
+                    // alternative to toggleSpotlightOnMouseDown:
+                    // toggle spotlight by pressing key 'c'
+                    67: function() { RevealSpotlight.toggleSpotlight() },
+
+                    // enter/leave presentation mode by pressing key 'p'
+                    80: function() {
+                        RevealSpotlight.togglePresentationMode();
+                    },
+                }
+    		});
+		</script>
+	</body>
+</html>
